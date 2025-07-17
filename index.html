@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="music-player">
+            <!-- Album Art Section -->
+            <div class="album-art">
+                <img id="albumImage" src="./images/find.jpg"alt="Album Art">
+                <div class="vinyl-effect"></div>
+            </div>
+
+            <!-- Song Info Section -->
+            <div class="song-info">
+                <h2 id="songTitle">Finding her</h2>
+                <p id="artistName">Kushagra</p>
+            </div>
+
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <span id="currentTime">0:00</span>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progressBar">
+                        <div class="progress-fill" id="progressFill"></div>
+                        <div class="progress-thumb" id="progressThumb"></div>
+                    </div>
+                </div>
+                <span id="totalTime">0:00</span>
+            </div>
+
+            <!-- Controls Section -->
+            <div class="controls">
+                <button class="control-btn" id="prevBtn">
+                    <div class="prev-icon"></div>
+                </button>
+                <button class="control-btn play-btn" id="playBtn">
+                    <div class="play-icon" id="playIcon"></div>
+                </button>
+                <button class="control-btn" id="nextBtn">
+                    <div class="next-icon"></div>
+                </button>
+            </div>
+
+            <!-- Volume Section -->
+            <div class="volume-section">
+                <div class="volume-icon" id="volumeIcon"></div>
+                <div class="volume-container">
+                    <div class="volume-bar" id="volumeBar">
+                        <div class="volume-fill" id="volumeFill"></div>
+                        <div class="volume-thumb" id="volumeThumb"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Controls -->
+            <div class="additional-controls">
+                <button class="toggle-btn" id="shuffleBtn">
+                    <div class="shuffle-icon"></div>
+                </button>
+                <button class="toggle-btn" id="repeatBtn">
+                    <div class="repeat-icon"></div>
+                </button>
+                <button class="toggle-btn" id="autoplayBtn">
+                    <div class="autoplay-icon"></div>
+                </button>
+                <button class="toggle-btn" id="playlistBtn">
+                    <div class="playlist-icon"></div>
+                </button>
+            </div>
+        </div>
+
+        <!-- Playlist Section -->
+        <div class="playlist-container" id="playlistContainer">
+            <h3>Playlist</h3>
+            <div class="playlist" id="playlist"></div>
+        </div>
+    </div>
+
+    <audio id="audioPlayer" preload="metadata"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
